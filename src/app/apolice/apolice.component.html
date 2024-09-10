@@ -1,0 +1,30 @@
+<div class="insurance-container">
+    <h2>Cálculo de Apólice de Seguro</h2>
+    <form (ngSubmit)="calcularApolice()">
+      <div>
+        <label for="nome">Nome do Segurado:</label>
+        <input id="nome" [(ngModel)]="nome" name="nome" type="text" required>
+      </div>
+      <div>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" [(ngModel)]="sexo" name="sexo" required>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+        </select>
+      </div>
+      <div>
+        <label for="idade">Idade:</label>
+        <input id="idade" [(ngModel)]="idade" name="idade" type="number" required>
+      </div>
+      <div>
+        <label for="valorAutomovel">Valor do Automóvel:</label>
+        <input id="valorAutomovel" [(ngModel)]="valorAutomovel" name="valorAutomovel" type="number" step="any" required>
+      </div>
+      <button type="submit">Calcular</button>
+      <div>
+        <label for="valorApolice">Valor da Apólice:</label>
+        <input id="valorApolice" [value]="valorApolice" type="text" readonly>
+      </div>
+    </form>
+  </div>
+  
